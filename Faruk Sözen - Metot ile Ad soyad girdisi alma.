@@ -1,21 +1,20 @@
-using System; 
+using System;
 
-class ödev
+class Odev
 {
-    static string AdSoyad(string ad, string soyad)
-    {
-        return ad + " " + soyad;
-    } 
+    static void AdSoyadYaz(string ad, string soyad)
+    {
+        Console.WriteLine("Ad Soyad: " + ad + " " + soyad);
+    }
 
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Adiniz: ");
-        string ad = Console.ReadLine(); 
+    static void Main()
+    {
+        Console.Write("Adiniz: ");
+        string ad = Console.ReadLine();
 
-        Console.WriteLine("Soyadiniz: ");
-        string soyad = Console.ReadLine(); 
+        Console.Write("Soyadiniz: ");
+        string soyad = Console.ReadLine();
 
-        string sonuc = AdSoyad(ad, soyad);
-        Console.WriteLine("Ad Soyad: " + sonuc);
-    }
+        AdSoyadYaz(ad, soyad);
+    }
 }
