@@ -1,0 +1,89 @@
+
+using System;
+using System.Threading;
+
+public class ATM
+{
+    static int bakiye = 0;
+    public static void Main(string[] args)
+    {
+        while(true)
+        {
+            Menu();
+            Console.WriteLine("Secimin:");
+            int secim = Convert.ToInt32(Console.ReadLine());
+            
+            switch (secim)
+            {
+                case 1:
+                BakiyeGoster();
+                break;
+                
+                case 2:
+                ParaYatir();
+                break;
+                
+                case 3:
+                ParaCek();
+                break;
+                
+                case 4:
+                Console.WriteLine("Cikis Yapiliyor...");
+                Thread.Sleep(3000);
+                Console.WriteLine("Cikis Yapildi. Giris Yapmak Icin ENTER'a Basin");
+                Console.ReadLine();
+                break;
+                
+                default:
+                Console.WriteLine("Hatali Secim Yaptiniz...");
+                Thread.Sleep(2000);
+                Console.WriteLine("Tekrar Deneyin");
+                break;
+            }
+            Console.WriteLine("Devam etmek icin ENTER'a bas...");
+            Console.ReadLine();
+
+            
+        }
+    }
+    static void Menu()
+    {
+        Console.WriteLine ("-------------ATM--------------");
+        Console.WriteLine ("1 - Bakiye Goruntule");
+        Console.WriteLine ("2 - Para Yatir");
+        Console.WriteLine ("3 - Para Cek");
+        Console.WriteLine ("4 - Cikis Yap");
+    }
+    
+    static void BakiyeGoster()
+    {
+     Console.WriteLine("Bakiyen " + bakiye + " TL");
+        
+    }
+    
+    static void ParaYatir()
+    {
+     Console.WriteLine("Yatirilacak Miktar: " );
+     int miktar = Convert.ToInt32(Console.ReadLine());
+     
+     bakiye += miktar;
+     Console.WriteLine("Islem Basarili. Yeni Bakiyeniz " + bakiye + " TL");
+    }
+    
+    static void ParaCek()
+    {
+     Console.WriteLine("Cekilecek Miktar");
+     int miktar = Convert.ToInt32(Console.ReadLine());
+     
+     if(bakiye < miktar)
+     {
+        Console.WriteLine("Bakiye Yetersiz");
+     }
+     else
+     {
+        bakiye -= miktar;
+        Console.WriteLine("Islem Basarili. Yeni Bakiyeniz: " + bakiye + " TL");
+     }
+        
+    }
+}
