@@ -1,0 +1,83 @@
+using System;
+
+public class HelloWorld
+ {
+    public static void Main(string[] args)
+    {
+        int para = 0;
+        double cekilen = Convert.ToDouble(Console.ReadLine());
+        double yatirilan = Convert.ToDouble(Console.ReadLine());
+        if (yatirilan > 0)
+        {
+            Paraekleme(yatirilan,para);
+        }
+        else 
+        {
+            Eklemeyok(para,yatirilan);
+        }
+    }
+}
+static void Paraekleme(double yatirilan,string para)
+{
+    if(para)
+    {
+       Ekleme(yatirilan,para);
+    }
+}
+static void Eklemeyok(double yatirilan,string para)
+{
+    if(para)
+    {
+       Eklemeyok(0,para);
+    }
+}
+static void Ekleme(double yatirilan,string para)
+{
+    Console.WriteLine(yatirilan + para);
+}
+static void Eklemeyok(double yatirilan, string para)
+{
+    Console.WriteLine(yatirilan + para);
+}
+{
+    static void Main(string[] args)
+  {
+    int para = 0;
+    double cekilen = Convert.ToDouble(Console.ReadLine());
+    double yatirilan = Convert.ToDouble(Console.ReadLine());
+    if (cekilen > 0 )
+    {
+        paracekme(cekilen,para);
+    }
+    else
+    {
+        cekmeyok(para,cekilen);
+    }
+  }    
+}
+   static void paracekme(double cekilen,string para)
+   {
+       if (para)
+       {
+           Cekme(cekilen,para);
+       }
+   }
+   static void Cekmeyok(double cekilen,string para)
+   {
+       if (para)
+       {
+           Cekmeyok(0,para);
+       }
+   }
+ static void Cekme(double cekilen,string para)
+ {
+    Console.WriteLine(para - cekilen);
+ }
+ static void Cekmeyok(double cekilen, string para)
+ {
+    Console.WriteLine(para);
+ }
+ static void Main (string[] args)
+ {
+    Console.WriteLine(para);
+ }
