@@ -1,0 +1,52 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        
+        int secim = 0;
+        int kese = 0;
+        
+        Console.WriteLine("*******SECENEKLER*******");
+        Console.WriteLine("");
+        Console.WriteLine("1- Para Yatir");
+        Console.WriteLine("2- Para Cek");
+        Console.WriteLine("3- Cikis Yap");
+        
+        while(secim<1)
+        {
+            Console.WriteLine("mevcut bakiye: " + kese);
+            Console.Write("Secenek: ");
+            int sec = Convert.ToInt32(Console.ReadLine());
+            
+            switch(sec)
+            {
+                case 1:
+                    Console.WriteLine("Para yatiriniz: ");
+                    int yatir = Convert.ToInt32(Console.ReadLine());
+                    kese = kese + yatir;
+                    break;
+                case 2:
+                    Console.WriteLine("Para cekiniz: ");
+                    int cek = Convert.ToInt32(Console.ReadLine());
+                    kese = kese - cek;
+                    break;
+                case 3:
+                    Console.WriteLine("Sistem kapatiliyor...");
+                    
+                    break;
+                
+            }
+        }
+    
+    
+    
+        
+    
+
+    }
+}
