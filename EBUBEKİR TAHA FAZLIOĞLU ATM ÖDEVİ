@@ -1,0 +1,76 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        string userName, password;
+        int right = 3;
+        int balance = 61000; 
+        int select;
+        while (right > 0)
+        {
+          
+            Console.Write("Kullanici Adiniz: ");
+            userName = Console.ReadLine();
+            Console.Write("Parolaniz: ");
+            password = Console.ReadLine();
+            
+            if (userName == "etf" && password == "1453")
+            {
+                Console.WriteLine("Merhaba, Gringotts Bankasina Hosgeldiniz!");
+                do
+                {
+                   
+                    Console.WriteLine("1-Para Yatirma");
+                    Console.WriteLine("2-Para Cekme");
+                    Console.WriteLine("3-Bakiye Sorgula");
+                    Console.WriteLine("4-Cikis Yap");
+                    Console.Write("Lutfen yapmak istediginiz islemi seciniz: ");
+                    select = int.Parse(Console.ReadLine());
+                    
+                    if (select == 1)
+                    {
+                        Console.Write("Para miktari: ");
+                        int price = int.Parse(Console.ReadLine());
+                        balance += price;
+                        Console.WriteLine($"{price} TL para yatirildi.");
+                    }
+                    else if (select == 2)
+                    {
+                        Console.Write("Para miktari: ");
+                        
+                        int price = int.Parse(Console.ReadLine());
+                        if (price > balance)
+                        {
+                            Console.WriteLine("Bakiye yetersiz.");
+                        }
+                        else
+                        {
+                            balance -= price;
+                            Console.WriteLine($"{price} TL para cekildi.");
+                        }
+                    }
+                    else if (select == 3)
+                    {
+                        Console.WriteLine("Bakiyeniz: " + balance + " TL");
+                    }
+                } while (select != 4);
+                Console.WriteLine("Tekrar gorusmek uzere.");
+                break;
+            }
+            else
+            {
+                right--;
+                Console.WriteLine("Hatali kullanici adi veya sifre. Tekrar deneyiniz.");
+                if (right == 0)
+                {
+                    Console.WriteLine("Hesabiniz bloke olmustur, lutfen banka ile iletisime geciniz.");
+                }
+                else
+                {
+                    Console.WriteLine("Kalan Hakkiniz: " + right);
+                }
+            }
+        }
+    }
+}
