@@ -1,0 +1,59 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+         int para = 5;   
+        int secim;
+        int miktar;
+
+        while (true)
+        {
+            Console.WriteLine("--- ATM ---");
+            Console.WriteLine("Bakiyeniz: " + para);
+            Console.WriteLine("1- Para Cek");
+            Console.WriteLine("2- Para Yatir");
+            Console.WriteLine("3- Cikis");
+            Console.Write("Seciminiz: ");
+
+            secim = Convert.ToInt32(Console.ReadLine());
+
+            if (secim == 1)
+            {
+                Console.Write("Cekilecek miktari giriniz: ");
+                miktar = Convert.ToInt32(Console.ReadLine());
+
+                if (miktar <= para)
+                {
+                    para -= miktar;
+                    Console.WriteLine("Para cekildi.");
+                }
+                else
+                {
+                    Console.WriteLine("Yetersiz bakiye!");
+                }
+            }
+            else if (secim == 2)
+            {
+                Console.Write("Yatırılacak miktari giriniz: ");
+                miktar = Convert.ToInt32(Console.ReadLine());
+
+                para += miktar;
+                Console.WriteLine("Para yatirildi.");
+            }
+            else if (secim == 3)
+            {
+                Console.WriteLine("Cikis yapiliyor");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Hatali secim");
+            }
+        }
+    }
+}
