@@ -1,0 +1,32 @@
+import turtle
+t = turtle.Screen()
+
+turtle.Screen()
+turtle.bgcolor("red")
+
+t.setup(500,400)
+
+kalem = turtle.Turtle()
+kalem.speed(8)
+kalem.color("red")
+kalem.goto(-20,-30)
+kalem.color("white")
+kalem.up
+kalem.begin_fill()
+kalem.circle(100)
+kalem.end_fill()
+
+kalem.color("white")
+kalem.goto(-45,-8)
+kalem.color("red")
+kalem.up
+kalem.begin_fill()
+kalem.circle(80)
+kalem.down()
+kalem.end_fill()
+
+
+kalem.goto(-100,-150)
+kalem.color("white")
+kalem.write("KIZILAY",font=("Arthiculate", 40, "bold"))
+kalem.color("red")
