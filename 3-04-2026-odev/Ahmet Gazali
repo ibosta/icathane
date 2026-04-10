@@ -1,0 +1,26 @@
+import turtle
+
+t = turtle.Turtle()
+w = turtle.Screen()
+
+w.title("Cumhuriyetimizin 100. Yılı")
+w.setup (width=600,height=400)
+w.bgcolor("white")
+
+t.up()
+
+t.goto(0,-50)
+t.color("red")
+t.begin_fill()
+t.circle(90)
+t.end_fill()
+
+t.goto(25,-30)
+t.color("white")
+t.begin_fill()
+t.circle(70)
+t.end_fill()
+
+t.goto(-100,-190)
+t.color("red")
+t.write("Kızılay",font=("Articulate",40,"bold")) 
