@@ -17,7 +17,7 @@ t.end_fill()
 
 t.up()
 t.goto(0, 20)
-t.color(black)
+t.color("black")
 t.down()
 
 t.begin_fill()
