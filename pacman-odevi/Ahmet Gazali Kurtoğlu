@@ -17,6 +17,7 @@ t.end_fill()
 
 t.up()
 t.goto(0, 20)
+t.color(black)
 t.down()
 
 t.begin_fill()
@@ -27,8 +28,5 @@ t.forward(200)
 
 t.end_fill()
 
-t.goto(-110, -190)
-t.color("yellow")
-t.write("PACMAN", font=("Articulate", 40, "bold"))
 
 turtle.done()
