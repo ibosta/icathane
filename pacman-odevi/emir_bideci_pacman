@@ -1,0 +1,45 @@
+import turtle
+
+scr = turtle.Screen()
+t = turtle.Turtle()
+
+scr.title("Pacman")
+scr.setup(width=600, height=400)
+scr.bgcolor("black")
+
+
+t.up()
+t.goto(0, -100)
+t.color("yellow")
+t.begin_fill()
+t.circle(120)
+t.end_fill()
+
+t.up()
+t.goto(0, 20)
+t.color("black")
+t.down()
+
+t.begin_fill()
+t.right(40)
+t.forward(150)
+t.left(110)
+t.forward(200)
+
+t.end_fill()
+
+t.goto(100,0)
+t.color("white")
+t.begin_fill()
+t.circle(20)
+t.end_fill()
+
+t.up()
+t.goto(200,0)
+t.color("white")
+t.begin_fill()
+t.circle(20)
+t.end_fill()
+
+
+turtle.done()
