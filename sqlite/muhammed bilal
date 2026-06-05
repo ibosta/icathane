@@ -1,0 +1,38 @@
+import sqlite3
+
+baglanti = sqlite3.connect("okul.db")
+imlec = baglanti.cursor()
+
+imlec.execute(
+    "CREATE TABLE IF NOT EXISTS ogrenciler (id INTEGER PRIMARY KEY, ad TEXT)"
+)
+
+while True:
+    print("1- Ogrenci ekle")
+    print("2- Ogrencileri listele")
+    print("3- CIKIS")
+    
+    secim = input("Secim: ")
+    
+    if secim == "1":
+        ad = input("Ogrenci adi: ")
+        
+        imlec.execute(
+            "INSERT INTO ogrenciler (ad) VALUES (?)",
+            [ad]
+        )
+        
+        baglanti.commit()
+        
+    elif secim == "2":
+        imlec.execute("SELECT * FROM ogrenciler")
+        
+        veriler = imlec.fetchall()
+        
+        for satir in veriler:
+            print(satir)
+            
+    elif secim == "3":
+        break
+    
+baglanti.close
